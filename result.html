@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAATRA Package Result</title>
+</head>
+
+<body>
+
+    <div style="color:black;" class="container">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2 class='container-heading'><span class="heading_font">YAATRA Package Prediction</span></h2>
+
+        <br><br><br><br>
+
+	     <!-- Result -->
+		<div style="color:black;" class="results">
+			{% if prediction==1 %}
+				<h1><span class='danger'>Yes<br><br>Customer will Purchase The Package.<br><br></span></h1>
+                <br><br><br><br><br><br>
+			
+			{% elif prediction==0 %}
+				<h1><span class='safe'>Opps <br><br>Customer will Not Purchase The Package.</span></h1>
+				
+			{% endif %}
+		</div>
+        </form>
+
+    </div>
+    <div>
+            <br><br> <br><br><br><br><br><br><br><br>
+
+           
+
+    </div>
+
+
+<style>
+
+/* Background Image */
+body
+{
+
+background-image: url("C:/Users/Bipul/Desktop/Upflairs/Course Project/Yaatra/tourP.jpg");     
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+            text-align: center;
+            padding: 0px;
+
+}
+
+/* Color */
+body{
+	font-family: Arial, Helvetica,sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+
+/* Heading Font */
+{
+    margin: 0;
+    font-size: 30px;
+    font-weight: normal;
+    width: 100px;
+    height: 23px;
+    top: 23px;
+}
+
+/*.heading_font{
+    color: #black;
+	font-family: 'Pacifico', cursive;
+	font-size: 50px;
+	font-weight: normal;
+}*/
+
+
+
+
+
+</style>
+
+
+</body>
+
+</html>
